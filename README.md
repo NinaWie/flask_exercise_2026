@@ -1,2 +1,3 @@
-# flask_exercise_2026
-flask exercise GTA 2026
+# GTA Flask lab 2026
+
+This is a repo to collaborate on the solution of the GTA flask lab
