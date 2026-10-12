@@ -84,6 +84,10 @@ def compute_mean():
     pass  # placeholder - can be deleted
 
 
+def create_app():
+    return app
+
+
 if __name__ == "__main__":
     # run
     app.run(debug=True, host="localhost", port=8989)
