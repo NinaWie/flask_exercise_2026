@@ -20,12 +20,7 @@ def welcome_to_flask():
 @app.route("/arguments", methods=["GET"])
 def working_with_arguments():
     my_argument = str(request.args.get("name", "default_name"))
-    # complex processing
     return jsonify(f"This is how we pass arguments in GET request. My name is {my_argument}")
-
-
-def new_method():
-    pass
 
 
 @app.route("/add_numbers", methods=["GET"])
