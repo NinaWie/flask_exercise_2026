@@ -58,7 +58,12 @@ def using_post():
 # TODO: TASK 1
 # @app.route("/round_float", methods=["GET"])
 # def round_float():
-#     ...
+@app.route("/round_float", methods=["GET"])
+def round_float():
+    """Round float to two decimal places."""
+    print(f"Received argument: {input_value}")
+    rounded_value = round(input_value, 2)
+    return jsonify({"rounded_value": rounded_value})
 
 # TODO: TASK 2 - one method for increase and one method for decrease value
 
