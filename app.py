@@ -58,7 +58,16 @@ def using_post():
 # TODO: TASK 1
 # @app.route("/round_float", methods=["GET"])
 # def round_float():
-#     ...
+@app.route("/round_float", methods=["GET"])
+def round_float():
+    """round a float value to the nearest integer"""
+    try:
+        input_value = float(request.args.get("value", 1.0))
+    except ValueError:
+        return jsonify("Invalid input for value")
+    print(f"Received argument: {input_value}")
+    rounded_value = round(input_value)
+    return jsonify({"rounded_value": rounded_value})
 
 # TODO: TASK 2 - one method for increase and one method for decrease value
 
