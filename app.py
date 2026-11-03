@@ -66,7 +66,19 @@ def round_float():
     return jsonify({"rounded_value": rounded_value})
 
 # TODO: TASK 2 - one method for increase and one method for decrease value
+@app.route("/increase_value", methods=["GET"])
+def increase_value():
+    """Increase value by 1"""
+    input_value = float(request.args.get("value", 0))
+    increased_value = input_value + 1
+    return jsonify({"increased_value": increased_value})
 
+@app.route("/decrease_value", methods=["GET"])
+def decrease_value():
+    """Decrease value by 1"""
+    input_value = float(request.args.get("value", 0))
+    decreased_value = input_value - 1
+    return jsonify({"decreased_value": decreased_value})
 
 # TODO TASK 3 - POST method to compute sum of list
 

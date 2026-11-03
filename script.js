@@ -39,13 +39,21 @@ function demo_post_ajax() {
 }
 
 // TODO TASK 2 - call Python backend for decreasing or increasing the value
-// function decrease_value() {
-//     ...
-// }
+function decrease_value() {
+    const valueElement = document.getElementById("value");
+    const currentValue = Number(valueElement.textContent);
+    const response = fetch(`http://localhost:8989/decrease_value?value=${currentValue}`);
+    const data = response.json();
+    valueElement.textContent = data.decreased_value;
+}
 
-// function increase_value() {
-//     ...
-// }
+function increase_value() {
+    const valueElement = document.getElementById("value");
+    const currentValue = Number(valueElement.textContent);
+    const response = fetch(`http://localhost:8989/increase_value?value=${currentValue}`);
+    const data = response.json();
+    valueElement.textContent = data.increased_value;
+}
 
 // TASK 3
 function post_sum_of_list() {
