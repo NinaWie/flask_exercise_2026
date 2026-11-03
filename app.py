@@ -1,4 +1,5 @@
 import numpy as np
+import pytorch
 
 import pyproj
 
@@ -25,7 +26,7 @@ def working_with_arguments():
 
 @app.route("/add_numbers", methods=["GET"])
 def add_numbers():
-    """add two numbers"""
+    """sum two numbers"""
     try:
         input_value_1 = int(request.args.get("num1", 1))
     except ValueError:
