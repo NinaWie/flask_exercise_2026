@@ -41,7 +41,7 @@ def add_numbers():
 @app.route("/access_with_javascript", methods=["GET"])
 @cross_origin()
 def javascript_demo():
-    """method to demonstrate how to access this endpoint with javascript"""
+    """Method to demonstrate how to access this endpoint with javascript"""
     # complex python processing
     response = jsonify("This should be shown on your website")
     return response
