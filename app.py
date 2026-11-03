@@ -25,6 +25,7 @@ def working_with_arguments():
 
 @app.route("/add_numbers", methods=["GET"])
 def add_numbers():
+    """add two numbers"""
     try:
         input_value_1 = int(request.args.get("num1", 1))
     except ValueError:
@@ -39,7 +40,7 @@ def add_numbers():
 @app.route("/access_with_javascript", methods=["GET"])
 @cross_origin()
 def javascript_demo():
-    """method to demonstrate how to access this endpoint with javascript"""
+    """Method to demonstrate how to access this endpoint with javascript"""
     # complex python processing
     response = jsonify("This should be shown on your website")
     return response
